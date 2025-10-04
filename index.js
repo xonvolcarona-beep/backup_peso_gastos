@@ -6,7 +6,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// 🔑 Hardcodeando API Key solo para pruebas locales
+const resend = new Resend("re_2XmTYuAq_NpG6rWW8jyiXg7FeNoCUCHzb");
 
 app.get("/", (req, res) => {
   res.send("🚀 API de Backup funcionando");
@@ -17,8 +18,8 @@ app.post("/backup-json", async (req, res) => {
 
   try {
     await resend.emails.send({
-   from: "Backup App <noreply@sandbox.resend.com>", // remitente verificado en Resend
-      to: "megawhitegengar@gmail.com",
+      from: "Backup App <noreply@sandbox.resend.com>", // remitente de prueba
+      to: "megawhitegengar@gmail.com",               // tu correo verificado en sandbox
       subject: `Backup: ${filename}`,
       text: "Adjunto respaldo de la base de datos.",
       attachments: [
