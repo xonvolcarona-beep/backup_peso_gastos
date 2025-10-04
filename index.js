@@ -17,7 +17,7 @@ app.post("/backup-json", async (req, res) => {
 
   try {
     await resend.emails.send({
-      from: "Backup App <noreply@tudominio.com>", // remitente verificado en Resend
+   from: "Backup App <noreply@sandbox.resend.com>", // remitente verificado en Resend
       to: "megawhitegengar@gmail.com",
       subject: `Backup: ${filename}`,
       text: "Adjunto respaldo de la base de datos.",
