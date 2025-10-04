@@ -7,7 +7,8 @@ app.use(cors());
 app.use(express.json());
 
 // 🔑 Hardcodeando API Key solo para pruebas locales
-const resend = new Resend("re_2XmTYuAq_NpG6rWW8jyiXg7FeNoCUCHzb");
+const resend = new Resend("re_RYTwcJGu_2HRuTJ2cnenB5whK9MsY32i5");
+
 
 app.get("/", (req, res) => {
   res.send("🚀 API de Backup funcionando");
