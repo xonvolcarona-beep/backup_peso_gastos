@@ -13,12 +13,12 @@ app.get("/", (req, res) => {
 });
 
 app.post("/backup-json", async (req, res) => {
-  const { filename, jsonContent, to } = req.body;
+  const { filename, jsonContent } = req.body;
 
   try {
     await resend.emails.send({
-      from: "Backup App <noreply@tudominio.com>", // remitente verificado
-      to,
+      from: "Backup App <noreply@tudominio.com>", // remitente verificado en Resend
+      to: "megawhitegengar@gmail.com",
       subject: `Backup: ${filename}`,
       text: "Adjunto respaldo de la base de datos.",
       attachments: [
