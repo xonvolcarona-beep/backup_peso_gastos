@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 
 // 🔑 Hardcodeando API Key solo para pruebas locales
-const resend = new Resend("re_RYTwcJGu_2HRuTJ2cnenB5whK9MsY32i5");
+const resend = new Resend("re_RWfqMk5s_3NUa5TVAPuBgkZdfGaL473hi");
 
 // Ruta raíz
 app.get("/", (req, res) => {
